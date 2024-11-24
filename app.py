@@ -9,12 +9,12 @@ import requests
 # Load the model
 @st.cache_resource
 def load_model():
-    model_path = "image_rec.pkl"
+    model_path = "eagle_crow.pkl"
     
     
     # Download the model if it doesn't already exist
     if not os.path.exists(model_path):
-        url = "https://github.com/maranurpraveen/DAV-6150/blob/main/image_rec.pkl"  # Raw URL to your file
+        url = "https://github.com/maranurpraveen/DAV-6150/blob/main/eagle_crow.pkl"  # Raw URL to your file
         with open(model_path, "wb") as f:
             response = requests.get(url)
             f.write(response.content)
